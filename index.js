@@ -9,7 +9,8 @@ const { buyrole1, buyrole2, buyrole3, buyrole4, buylogs, owner, probot, price1, 
 const { Dataa } = require('./DataBase/Models/data');
 require('./DataBase/connect');
 
-const token = ("MTEwMDA5ODEzODAwNzY4NzIzOQ.Gd8XiM.4evOWhWpVFp5CnBbX_zqoeobNJSauvpRqzcTb8");
+client.login(process.env.token);
+
 
 
 client.on(Events.ClientReady, async () => {
