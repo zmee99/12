@@ -9,7 +9,7 @@ const { buyrole1, buyrole2, buyrole3, buyrole4, buylogs, owner, probot, price1, 
 const { Dataa } = require('./DataBase/Models/data');
 require('./DataBase/connect');
 
-client.login(process.env.token);
+const { token } = require('./config.json');
 
 
 
@@ -381,3 +381,5 @@ process.on("uncaughtException", errorr => {
         .setDescription(`\`\`\`${errorr}\`\`\``)
     webhook.send({ content: `<@!${owner}>`, embeds: [err] });
 });
+
+client.login(token);
