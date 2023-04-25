@@ -11,6 +11,7 @@ require('./DataBase/connect');
 
 client.login(process.env.token);
 
+
 client.on(Events.ClientReady, async () => {
     await console.log(client.user.tag);
     await client.user.setActivity(`Idk`, { type: 'WATCHING' });
